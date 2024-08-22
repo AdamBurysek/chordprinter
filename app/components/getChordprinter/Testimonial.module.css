@@ -1,0 +1,159 @@
+.container {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding: 10px;
+}
+
+.slider {
+  width: 90%;
+  max-width: 915px;
+  height: 400px;
+  --swiper-pagination-color: var(--color-primary);
+  --swiper-navigation-top-offset: 40%;
+  --swiper-pagination-top: 370px;
+  --swiper-pagination-bullet-border-radius: 2px;
+  --swiper-pagination-bullet-width: 40px;
+  --swiper-pagination-bullet-height: 4px;
+  --swiper-pagination-left: 200px;
+}
+
+.navigationButton {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-grey);
+  opacity: 0.75;
+  transition: 0.5s;
+  display: none;
+}
+
+.navigationButton:hover {
+  opacity: 1;
+}
+
+.prevIcongImage {
+  rotate: 180deg;
+  margin-top: 2px;
+  transition: 0.5s;
+}
+
+.prevIcongImage:hover {
+  margin-right: 10px;
+}
+
+.nextIcongImage {
+  margin-top: 2px;
+  transition: 0.5s;
+}
+
+.nextIcongImage:hover {
+  margin-left: 10px;
+}
+
+.slideBox {
+  position: relative;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  width: 100%;
+  height: 360px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slideImageBox {
+  margin: 0 auto;
+}
+
+.slideImage {
+  border-radius: 8px;
+  margin: 20px 0;
+  width: 172px;
+  height: 172px;
+}
+
+.referenceTextBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referenceText {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.authorBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.line {
+  display: block;
+  margin-right: 15px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-grey);
+}
+
+.authorText {
+  color: var(--color-grey);
+}
+
+@media screen and (min-width: 768px) {
+  .slideBox {
+    font-size: var(--fs-text-medium);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .slider {
+    height: 255px;
+    --swiper-pagination-top: 200px;
+    --swiper-pagination-bullet-height: 2px;
+  }
+
+  .navigationButton {
+    display: block;
+  }
+
+  .slideBox {
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 200px 1fr;
+    height: 200px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    font-size: var(--fs-text-large);
+  }
+
+  .slideImageBox {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .slideImage {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 0;
+  }
+  .authorBox {
+    justify-content: flex-start;
+    margin-left: 120px;
+  }
+  .referenceText {
+    max-width: 600px;
+  }
+}
